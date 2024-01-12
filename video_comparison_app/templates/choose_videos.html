@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Videos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'text/style.css' %}">
+</head>
+<body>
+    <h2>Choose Videos</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="video1">Select Video 1:</label>
+        <input type="file" name="video1" accept="video/*" required><br>
+        <label for="video2">Select Video 2:</label>
+        <input type="file" name="video2" accept="video/*" required><br>
+        <button type="submit">Compare Videos</button>
+    </form>
+</body>
+</html>
